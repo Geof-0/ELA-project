@@ -64,12 +64,21 @@ class page_opener{
 
         // click detection for page opener (not page)
         this.viewSlideElement.addEventListener('click', () => {
-            console.log(`user requests to view page for element: ${this.element.id}`)
+            console.log(`user requests to view page for element: ${this.pageElement.id}`)
+            const button_click = new Audio('sounds/button-click.mp3');
+            button_click.volume = 1;
+            button_click.play().then(() => console.log('playing')).catch(err => console.log(err));       
+            console.log('audio played')  
             this.view_page()
         });
 
         // click detection for page closer (page child element => return button)
         this.pageReturnElement.addEventListener('click', () => {
+            console.log(`user requests to view page for element: ${this.pageElement.id}`)
+            const button_click = new Audio('sounds/button-click.mp3');
+            button_click.volume = 1;
+            button_click.play().then(() => console.log('playing')).catch(err => console.log(err));
+            console.log('audio played')
             this.unview_page()
         });
     }
