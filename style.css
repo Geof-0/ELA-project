@@ -69,6 +69,12 @@
     transform: translate(-50%, -50%);
 }
 
+.horizontal-centered {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 
 
 
@@ -136,6 +142,17 @@
 
 }
 
+.page-text-element {
+    height:auto;
+    width : 800px;
+
+    color: white;
+    font-size: 16px;
+    font-family: sans-serif;
+    transform: translate(-50%, 0px) translate(0px, 200px);
+
+    white-space: pre-wrap;
+}
 
 
 
