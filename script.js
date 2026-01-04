@@ -64,21 +64,17 @@ class page_opener{
 
         // click detection for page opener (not page)
         this.viewSlideElement.addEventListener('click', () => {
-            console.log(`user requests to view page for element: ${this.pageElement.id}`)
-            const button_click = new Audio('sounds/button-click.mp3');
-            button_click.volume = 1;
-            button_click.play().then(() => console.log('playing')).catch(err => console.log(err));       
-            console.log('audio played')  
+            console.log(`user requests to view page for element: ${this.element.id}`)
+            const button_click_sound = new Audio("sounds/button-click.mp3")
+            button_click_sound.play()
             this.view_page()
         });
 
         // click detection for page closer (page child element => return button)
         this.pageReturnElement.addEventListener('click', () => {
-            console.log(`user requests to view page for element: ${this.pageElement.id}`)
-            const button_click = new Audio('sounds/button-click.mp3');
-            button_click.volume = 1;
-            button_click.play().then(() => console.log('playing')).catch(err => console.log(err));
-            console.log('audio played')
+            console.log(`user requests to unview page for element: ${this.element.id}`)
+            const button_click_sound = new Audio("sounds/button-click.mp3")
+            button_click_sound.play()
             this.unview_page()
         });
     }
@@ -102,6 +98,19 @@ const slide_3_page_opener = new page_opener('s3 opener', 'slide 3', 'slide 3 of 
 const slide_4_page_opener = new page_opener('s4 opener', 'slide 4', 'slide 4 of the website', 's4', 'slide 4')
 const slide_5_page_opener = new page_opener('s5 opener', 'slide 5', 'slide 5 of the website', 's5', 'slide 5')
 const slide_6_page_opener = new page_opener('s6 opener', 'slide 6', 'slide 6 of the website', 's6', 'slide 6')
+
+// fun stuff
+
+const star_wars_theme = new Audio("sounds/star-wars-theme.mp3")
+star_wars_theme.loop = true;
+star_wars_theme.volume = 0.3;
+
+const music_starter = document.getElementById("music_starter")
+music_starter.addEventListener('click', () => {
+    star_wars_theme.play()
+});
+
+
 
 
 
