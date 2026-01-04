@@ -278,6 +278,7 @@ star_wars_theme.volume = 0.3;
 const music_starter = document.getElementById("music_starter")
 music_starter.addEventListener('click', () => {
     star_wars_theme.play()
+    music_starter.style.display = 'None'
 });
 
 
