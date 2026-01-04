@@ -16,11 +16,11 @@
 
 #menuTitle {
     height: auto;
-    width: 600px;
+    width: 500px;
 
     position: absolute;
     top: 120px;
-    left:400px;
+    left:620px;
 
     font-size: 70px;
     font-family:'Gill Sans';
@@ -30,8 +30,8 @@
 
 #music_starter {
     position: absolute;
-    top: 703px;
-    left: 900px;
+    top: 710px;
+    left: 785px;
 
     height: auto;
     width: auto;
@@ -42,6 +42,32 @@
     background-color: rgb(70, 70, 70);
 }
 
+
+/* rows to contain page-openers */
+
+#row1 {
+    position: absolute;
+
+    height: 750px;
+    width: 250px;
+
+    top: 20px;
+    left: 25px;
+
+    gap: 8px;
+}
+
+#row2 {
+    position: absolute;
+
+    height: 750px;
+    width: 250px;
+
+    top: 20px;
+    left: 325px;
+
+    gap: 8px;
+}
 
 
 
@@ -87,7 +113,7 @@
 .page-opener-title {
     height: auto;
     width: 200x;
-    font-size: 36px;
+    font-size: 22px;
     font-family: sans-serif;
     border: 3px solid rgb(100, 100, 100);
     align-items: center;
