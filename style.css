@@ -1,5 +1,13 @@
 /* individual element styling */
 
+#body {
+    background-color: white;
+    overflow-x: auto;
+    overflow-y: auto;
+    white-space: auto;
+}
+
+
 #menu {
     /* size */
     height: 800px;
@@ -124,20 +132,24 @@
 }
 
 .page-opener-title {
-    height: auto;
-    width: 200x;
+    max-height: 100px;
+    max-width: 160px;
     font-size: 22px;
     font-family: sans-serif;
     border: 3px solid rgb(100, 100, 100);
-    align-items: center;
+    text-align: center;
     background-color: rgb(70, 70, 70);
     color: white;
+
+    overflow: auto;
+
 }
 
 .page-opener-details {
     font-size:16px;
     font-family: sans-serif;
     color: white;
+    text-align: center;
 }
 
 .page-opener-view-slide {

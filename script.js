@@ -103,6 +103,38 @@ class page_opener{
     }
 }
 
+// additional classes to add to slides
+
+class imageElement {
+    constructor(img_src, img_id, img_alt, img_height, img_width){
+        this.element = document.createElement("img");
+        this.element.src = img_src;
+        this.element.alt = img_alt;
+        this.element.id = img_id;
+        this.element.style.height = img_height;
+        this.element.style.width = img_width;
+        this.element.style.border = '3px solid rgb(100, 100, 100)'
+    }
+
+    append_to_parent(parent_element, absolute_position= true, img_top= 0, img_left= 0){
+        parent_element.appendChild(this.element)
+        if (absolute_position){
+            this.element.style.position = 'absolute';
+            this.element.style.top = `${img_top}px`;
+            this.element.style.left = `${img_left}px`;
+        }
+    }
+}
+
+
+
+
+
+
+// These are the old slides. keep for backup
+
+/*
+
 // slides
 
 const slide_1_page_opener = new page_opener('s1 opener', 'What is AI?', 'Explains what AI is', 's1', 'What is AI?', 1)
@@ -114,8 +146,6 @@ const slide_6_page_opener = new page_opener('s6 opener', 'Examples', 'Examples o
 const slide_7_page_opener = new page_opener('s7 opener', 'Responder benefits', 'How AI in emergency response can help those responding to the emergency', 's7', 'How AI in helps responders', 2)
 const slide_8_page_opener = new page_opener('s8 opener', 'Cost', 'The cost of implementation, and etc.', 's8', 'The cost of this', 2)
 const slide_9_page_opener = new page_opener('s9 opener', 'Sources', 'Sources used for getting information', 's9', 'Sources', 2)
-
-
 
 
 // slide 1 contents:
@@ -260,6 +290,25 @@ https://www.cisa.gov/sites/default/files/2025-03/25_0328_s-n_ai-implemen-ecc_inf
 https://www.rand.org/pubs/commentary/2025/08/how-ai-is-changing-our-approach-to-disasters.html\n
 yes, you indeed are unable to acess the website by just clicking them. i coded this entire thing okay, its not easy\n
 `
+
+*/
+
+// NEW slides
+
+const s1 = new page_opener('s1', 'Opinions on AI', 'this slide shows statistics about opinions on AI in emergency response', 's1p', 'Opinions about AI in emergency response', 1);
+
+const s1te = document.createElement('div');
+s1te.classList.add('box', 'horizontal-centered', 'page-text-element'); 
+s1.pageElement.appendChild(s1te);
+
+s1te.textContent = 'testing text'
+
+s1ie = new imageElement('images/AIpngforELA.png', 's1ie', 'AI png', 'auto', '300px')
+s1ie.append_to_parent(s1.pageElement, true, 500, 500)
+
+
+
+
 
 
 
