@@ -8,7 +8,7 @@
         document.addEventListener('DOMContentLoaded', () =>{
         let viewportWidth = window.innerWidth;
         let viewportHeight = window.innerHeight;
-        const client_is_phone = viewportWidth < 1200; 
+        const client_is_phone = viewportWidth < 12000; 
 
         console.log(`${viewportWidth}, ${viewportHeight}`)
 
@@ -53,9 +53,10 @@
     </div>
     </div>
     <div id="phoneBody">
-
-
+        <div id="TemporaryBarrier" class="centered centered-items">
+            You have hit a barrier. this website is not yet compatible for your device. 
+            this intends to only stop phones.
+             if you're not using a phone and this occours, please contact the owner of this repository
+        </div>
     </div>
-
-
 </body>
