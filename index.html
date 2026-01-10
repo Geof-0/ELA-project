@@ -8,7 +8,7 @@
         document.addEventListener('DOMContentLoaded', () =>{
         let viewportWidth = window.innerWidth;
         let viewportHeight = window.innerHeight;
-        const client_is_phone = viewportWidth < 12000; 
+        const client_is_phone = viewportWidth < 1200; 
 
         console.log(`${viewportWidth}, ${viewportHeight}`)
 
@@ -31,7 +31,7 @@
             document.getElementById("phoneBody").style.display = 'None'
         }
 
-        document.getElementById("menuTitle").textContent = `screen size: ${viewportWidth}, ${viewportHeight}`;
+        // document.getElementById("menuTitle").textContent = `screen size: ${viewportWidth}, ${viewportHeight}`; -- for testing
         document.head.appendChild(linkElement)
         document.head.appendChild(scriptElement)
     });
