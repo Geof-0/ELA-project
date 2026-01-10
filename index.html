@@ -2,18 +2,59 @@
 <head>
     <meta charset = "UTF-8">
     <title>ELA project website</title>
-    <link rel= "stylesheet" href= "style.css">
-    <script src= "script.js" defer></script>
+    <!--link rel= "stylesheet" href= "style.css"-->
+    <script>
+        // script to provide css file based on users 
+        document.addEventListener('DOMContentLoaded', () =>{
+        let viewportWidth = window.innerWidth;
+        let viewportHeight = window.innerHeight;
+        const client_is_phone = viewportWidth < 550;
+
+        console.log(`${viewportWidth}, ${viewportHeight}`)
+
+        const linkElement = document.createElement('link')
+
+        const scriptElement = document.createElement('script')
+        scriptElement.defer = true;
+
+        if (client_is_phone) {
+            // phone styling
+            linkElement.rel = 'stylesheet'
+            linkElement.href = 'phoneStyle.css'
+            scriptElement.src = "phoneScript.js"
+            document.getElementById("computerBody").style.display = 'None'
+        } else {
+            // computer styling
+            linkElement.rel = 'stylesheet'
+            linkElement.href = 'style.css'
+            scriptElement.src = "script.js"
+            document.getElementById("phoneBody").style.display = 'None'
+        }
+
+        document.head.appendChild(linkElement)
+        document.head.appendChild(scriptElement)
+    });
+    </script>
 </head>
 <body id="body">
-    <!-- all visible elements -->
-    <div id="menu" class="box centered">
-        <!-- child elements of menu -->
-        <div id="row1" class="box centered-items"></div>
-        <div id="row2" class="box centered-items"></div>
 
-        <div id="menuTitle" class="box centrered">AI in emergency response</div>
-        <img src="images/AIpngforELA.png" alt="AI image" id="menu-image1">
-        <div id="music_starter" class = "box">Click me to start music!</div>
+
+    <div id="computerBody">
+        <!-- all visible elements for computer -->
+        <div id="menu" class="box centered">
+            <!-- child elements of menu -->
+            <div id="row1" class="box centered-items"></div>
+            <div id="row2" class="box centered-items"></div>
+
+            <div id="menuTitle" class="box centrered">AI in emergency response</div>
+            <img src="images/AIpngforELA.png" alt="AI image" id="menu-image1">
+            <div id="music_starter" class = "box">Click me to start music!</div>
     </div>
+    </div>
+    <div id="phoneBody">
+
+
+    </div>
+
+
 </body>

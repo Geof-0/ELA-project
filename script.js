@@ -317,7 +317,6 @@ s1ie.append_to_parent(s1.pageElement, true, 500, 500)
 
 
 
-
 // fun stuff
 
 const star_wars_theme = new Audio("sounds/star-wars-theme.mp3")
@@ -330,7 +329,12 @@ music_starter.addEventListener('click', () => {
     music_starter.style.display = 'None'
 });
 
-// good luck percy
+
+
+
+
+
+
 
 
 
