@@ -1,4 +1,4 @@
-console.log("js is working")
+console.log("js is working (computer js)")
 
 
 const menu = document.getElementById("menu")
