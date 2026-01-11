@@ -87,8 +87,10 @@ class PhonePage{
 
         // event listener for viewPage
         this.viewPageElement.addEventListener('click', () => {
-            console.log("user requests to view page: " + opener_title);
+            console.log("user requests to view page: " + this.openerTitle.textContent);
             this.viewPage();
+            const clickSound = new Audio("sounds/button-click.mp3");
+            clickSound.play();
         });
 
         // page
@@ -112,6 +114,14 @@ class PhonePage{
         this.pageReturn.textContent = 'Return'
         this.pageElement.appendChild(this.pageReturn);
 
+        // event listener for pageReturn
+        this.pageReturn.addEventListener('click', () => {
+            console.log("user requests to unview page: " + this.pageTitle.textContent);
+            this.unviewPage();
+            const clickSound = new Audio("sounds/button-click.mp3");
+            clickSound.play();
+        });
+
 
         document.body.appendChild(this.pageElement)
     }
@@ -123,9 +133,9 @@ class PhonePage{
     }
 
     unviewPage(){
-        phoneMenu.style.opacity = '0.01'
-        phoneMenu.style.pointerEvents = 'none';
-        this.pageElement.style.display = 'block';
+        phoneMenu.style.opacity = '1'
+        phoneMenu.style.pointerEvents = 'auto';
+        this.pageElement.style.display = 'none';
     }
 }
 
