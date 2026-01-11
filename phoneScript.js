@@ -59,7 +59,7 @@ phoneSizeChangeObserver.observe(phoneMenuTitle);
 
 
 class PhonePage{
-    constructor(opener_title, opener_details, page_title){
+    constructor(opener_title, opener_details, page_title, page_text){
         const phoneRow1 = document.getElementById("phoneRow1")
 
 
@@ -102,26 +102,37 @@ class PhonePage{
         this.pageTitle.textContent = page_title;
         this.pageElement.appendChild(this.pageTitle);
 
+        this.pageText = document.createElement("div");
+        this.pageText.classList.add("phone-page-text");
+        this.pageText.textContent = page_text;
+        this.pageElement.appendChild(this.pageText);
+
+        this.pageReturn = document.createElement('div');
+        this.pageReturn.classList.add("phone-page-return");
+        this.pageReturn.textContent = 'Return'
+        this.pageElement.appendChild(this.pageReturn);
+
+
         document.body.appendChild(this.pageElement)
     }
 
     viewPage(){
         phoneMenu.style.opacity = '0.01';
         phoneMenu.style.pointerEvents = 'none';
-        this.pageElement.style.display = 'flex';
+        this.pageElement.style.display = 'block';
     }
 
     unviewPage(){
         phoneMenu.style.opacity = '0.01'
         phoneMenu.style.pointerEvents = 'none';
-        this.pageElement.style.display = 'none';
+        this.pageElement.style.display = 'block';
     }
 }
 
 
 
-const test = new PhonePage('hi hi hi', 'details details details details', 'test test')
-const test2 = new PhonePage('hi hi hi', 'details details details details', 'test test')
+const test = new PhonePage('hi hi hi', 'details details details details', 'test', 'this is page 1')
+const test2 = new PhonePage('hi hi hi', 'details details details details', 'test test', 'this is page 2')
 
 
 
