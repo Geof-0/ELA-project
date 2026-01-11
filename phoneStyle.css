@@ -40,8 +40,7 @@
 
 #phoneMenuTitle {
     width: 80%;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    min-height: 124.5px;
     box-sizing: border-box;
     border: 7px solid rgb(130, 130, 130);
     background-color: rgb(90, 90, 90);
@@ -56,14 +55,12 @@
     width: 80%;
     height: 80%;
 
-    display: flex;
+    display: block;
     gap: 16px;
-    overflow: auto;
+    overflow-y: auto;
 
     border: 7px solid rgb(130, 130, 130);
     background-color: rgb(90, 90, 90);
-
-
 
 }
 
@@ -99,4 +96,85 @@
     text-align: center;
     align-items: center;
 }
+
+/* classes for js */
+
+.phone-page-opener {
+    width: 90%;
+    max-height: 300px;
+    background-color: rgb(80, 80, 80);
+    border: 7px solid rgb(120, 120, 120);
+    display: grid;
+    place-items: center;
+    box-sizing: border-box;
+    margin-inline: auto;
+    margin-top: 20px;
+
+    @supports (min-height: 300px){
+        overflow: auto;
+    }
+
+}
+
+
+.phone-opener-title {
+    display: block;
+    max-width: 80%;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+
+    background-color: rgb(70, 70, 70);
+    border: 7px solid rgb(130, 130, 130);
+
+    align-self: flex-start;
+}
+
+.phone-opener-details {
+    max-width: 80%;
+    text-align: center;
+    color: white;
+    font-size: 26px;
+    
+
+    align-self: flex-start;
+}
+
+.phone-opener-view {
+    width: 80%;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    background-color: rgb(46, 250, 0);
+    border: 7px solid rgb(120, 120, 120)
+}
+
+
+
+/* page */
+
+.phone-page {
+    width: 90%;
+    height: 95%;
+
+    background-color: rgb(70, 70, 70);
+    border: 7px solid rgb(130, 130, 130);
+
+    display: grid;
+    gap: 16px;
+}
+
+.phone-page-title {
+    width: 80%;
+    height: min-content;
+    justify-content: center;
+    font-size: 50px;
+    color: white;
+    background-color: rgb(90, 90, 90);
+    border: 7px solid rgb(130, 130, 130);
+}
+
+
+
+
 
