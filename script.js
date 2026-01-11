@@ -133,7 +133,6 @@ class imageElement {
 
 // These are the old slides. keep for backup
 
-/*
 
 // slides
 
@@ -291,9 +290,9 @@ https://www.rand.org/pubs/commentary/2025/08/how-ai-is-changing-our-approach-to-
 yes, you indeed are unable to acess the website by just clicking them. i coded this entire thing okay, its not easy\n
 `
 
-*/
 
-// NEW slides
+// NEW slides (dont use yet, probably for mobile only.)
+/*
 
 const s1 = new page_opener('s1', 'Opinions on AI', 'this slide shows statistics about opinions on AI in emergency response', 's1p', 'Opinions about AI in emergency response', 1);
 
@@ -305,7 +304,7 @@ s1te.textContent = 'testing text'
 
 s1ie = new imageElement('images/AIpngforELA.png', 's1ie', 'AI png', 'auto', '300px')
 s1ie.append_to_parent(s1.pageElement, true, 500, 500)
-
+*/
 
 
 

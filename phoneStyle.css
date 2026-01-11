@@ -186,7 +186,7 @@
 .phone-page-text {
     max-width: 80%;
     height: min-content;
-    max-height: 1600px;
+    max-height: 1000px;
     font-size: 32px;
     font-family: sans-serif;
     color: white;
@@ -196,11 +196,8 @@
     margin-inline: auto;
     margin-top: 20px;
 
-    text-align: center;
-
-    overflow-y: auto;
-    overflow-x: hidden;
-
+    white-space: pre-wrap;
+    overflow: auto;
 }
 
 .phone-page-return {
